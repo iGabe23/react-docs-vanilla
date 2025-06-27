@@ -1,6 +1,6 @@
 # React Docs Tutorial (Vanilla)
 
-Este proyecto es parte de una **evidencia académica**. La actividad requería la creación de una **página web estática** utilizando únicamente **HTML, CSS y JavaScript** que explicara un tema de interés personal.
+Este proyecto es parte de una **evidencia académica**. La actividad requería la creación de un **Tutorial** utilizando únicamente **HTML, CSS y JavaScript** que explicara un tema de interés personal.
 
 ## Propósito
 
@@ -13,8 +13,7 @@ Su objetivo es permitir el repaso y la comprensión clara de los principales con
 - Estado y Ciclo de Vida
 - Eventos
 - Hooks
-- Patrones comunes
-- Pruebas y rendimiento
+- Rendimiento
 
 ## Enfoque técnico
 
