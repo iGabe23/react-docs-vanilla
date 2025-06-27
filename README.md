@@ -1,6 +1,6 @@
 # React Docs Tutorial (Vanilla)
 
-Este proyecto nació como parte de una **evidencia académica**. La actividad requería la creación de una **página web estática** utilizando únicamente **HTML, CSS y JavaScript** que explicara un tema de interés personal.
+Este proyecto es parte de una **evidencia académica**. La actividad requería la creación de una **página web estática** utilizando únicamente **HTML, CSS y JavaScript** que explicara un tema de interés personal.
 
 ## Propósito
 
@@ -26,32 +26,11 @@ Este proyecto está construido completamente con tecnologías **Vanilla**:
 - Sistema de **temas claro/oscuro**
 - Importación dinámica de componentes desde carpetas organizadas
 
-### Estructura Modular
+## Notas
 
-```bash
-.
-├── components/
-│   ├── navbar.html
-│   ├── sidebar.html
-│   └── main.html
-├── scripts/
-│   ├── main.js
-│   ├── navbar.js
-│   └── sidebar.js
-├── styles/
-│   ├── base.css
-│   ├── navbar.css
-│   ├── sidebar.css
-│   └── theme.css
-├── index.html
-```
+La primera versión de esta actividad utilizaba una estructura basada en componentes, donde cada sección estaba dividida en archivos independientes. Al parecer, esta estructura fue ignorada durante la revisión, al no visualizarse correctamente desde el index.html.
 
-## Próximas iteraciones
-
-- Incluir nuevas secciones temáticas (Rendering condicional, useMemo, useCallback, etc.)
-- Mejorar el sistema de navegación lateral
-- Agregar un sistema de búsqueda de contenido
-- Incorporar un sistema de comentarios o retroalimentación
+Por esta razón, en esta versión corregida, todo el contenido se ha consolidado en el archivo index.html, asegurando que la página cargue correctamente desde el navegador sin necesidad de revisar carpetas externas. Esto garantiza una visualización inmediata, y facilita la validación de la evidencia.
 
 ## Autor
 Gabriel Martínez – 2025

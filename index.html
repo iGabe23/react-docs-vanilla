@@ -4,24 +4,429 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learn React - Documentation</title>
-    <link rel="stylesheet" href="styles/theme.css" />
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/navbar.css" />
-    <link rel="stylesheet" href="styles/sidebar.css" />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
+  <!-- Header -->
   <body class="dark-theme">
-    <nav id="navbar-placeholder"></nav>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" class="logo">⚛️ React Docs</a>
+        <div class="nav-controls">
+          <button class="theme-toggle" id="themeToggle">🌙</button>
+          <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        </div>
+      </nav>
+    </header>
+    <!-- Side Content -->
     <div class="container">
-      <aside id="sidebar-placeholder"></aside>
-      <main id="main-content"></main>
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Get Started</h3>
+            <div class="sidebar-dropdown">
+              <button class="dropdown-header">
+                Quick Start
+                <span class="dropdown-icon">▼</span>
+              </button>
+              <div class="dropdown-content">
+                <ol>
+                  <li>
+                    <a href="#installation" data-section="installation"
+                      >Installation</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#your-first-component"
+                      data-section="your-first-component"
+                      >Your First Component</a
+                    >
+                  </li>
+                  <li><a href="#jsx" data-section="jsx">What is JSX?</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Learn React</h3>
+            <div class="sidebar-dropdown">
+              <button class="dropdown-header">
+                Components
+                <span class="dropdown-icon">▼</span>
+              </button>
+              <div class="dropdown-content">
+                <ol>
+                  <li>
+                    <a href="#components" data-section="components"
+                      >Components and Props</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#state" data-section="state"
+                      >State and Lifecycle</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#events" data-section="events">Handling Events</a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div class="sidebar-dropdown">
+              <button class="dropdown-header">
+                Hooks
+                <span class="dropdown-icon">▼</span>
+              </button>
+              <div class="dropdown-content">
+                <ol>
+                  <li>
+                    <a href="#hooks-intro" data-section="hooks-intro"
+                      >Introduction to Hooks</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#usestate" data-section="usestate"
+                      >useState Hook</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#useeffect" data-section="useeffect"
+                      >useEffect Hook</a
+                    >
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-section">
+            <h3 class="sidebar-title">Advanced</h3>
+            <div class="sidebar-dropdown">
+              <button class="dropdown-header">
+                Best Practices
+                <span class="dropdown-icon">▼</span>
+              </button>
+              <div class="dropdown-content">
+                <ol>
+                  <li>
+                    <a href="#patterns" data-section="patterns"
+                      >Common Patterns</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#performance" data-section="performance"
+                      >Performance</a
+                    >
+                  </li>
+                  <li><a href="#testing" data-section="testing">Testing</a></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- Main Content -->
+      <main id="main-content">
+        <div class="content">
+          <!-- Hero Section -->
+          <section class="hero">
+            <h1>Learn React</h1>
+            <p>The library for web and native user interfaces</p>
+            <a href="#installation" class="cta-button">Get Started</a>
+          </section>
+          <!-- Installation Section -->
+          <section class="section" id="installation">
+            <h2>Installation</h2>
+            <div class="section-content">
+              <img
+                src="./assets/installation-example.png"
+                alt="React installation"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  React is designed for gradual adoption, and you can use as
+                  little or as much React as you need.
+                </p>
+                <h3>Create a New React App</h3>
+                <p>
+                  The easiest way to get started with React is by using
+                  <code class="inline-code">create-react-app</code>:
+                </p>
+                <div class="code-block">
+                  npx create-react-app my-app<br />cd my-app<br />npm start
+                </div>
+                <h3>Add React to an Existing Project</h3>
+                <p>
+                  You can also add React to an existing HTML page with script
+                  tags:
+                </p>
+                <div class="code-block">
+                  &lt;script crossorigin
+                  src="https://unpkg.com/react@18/umd/react.development.js"&gt;&lt;/script&gt;<br />&lt;script
+                  crossorigin
+                  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"&gt;&lt;/script&gt;
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Your First Component -->
+          <section class="section" id="your-first-component">
+            <h2>Your First Component</h2>
+            <div class="section-content">
+              <img
+                src="./assets/first-component-example.png"
+                alt="First React component"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  React apps are made out of components. A component is a piece
+                  of the UI that has its own logic and appearance.
+                </p>
+                <div class="code-block">
+                  function MyButton() &#123;<br />
+                  return (&lt;button&gt;I'm a button&lt;/button&gt;);<br />&#125;
+                </div>
+                <div class="code-block">
+                  export default function MyApp() &#123;<br />
+                  return (&lt;div&gt;&lt;h1&gt;Welcome to my
+                  app&lt;/h1&gt;&lt;MyButton /&gt;&lt;/div&gt;);<br />&#125;
+                </div>
+                <p>
+                  Notice how <code class="inline-code">MyButton</code> starts
+                  with a capital letter. That's how you know it's a React
+                  component. React component names must always start with a
+                  capital letter, while HTML tags must be lowercase.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- What is JSX? -->
+          <section class="section" id="jsx">
+            <h2>What is JSX?</h2>
+            <div class="section-content">
+              <img
+                src="./assets/jsx-example.png"
+                alt="JSX example"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  JSX is a syntax extension for JavaScript that lets you write
+                  HTML-like code inside JavaScript. It's one of React's most
+                  powerful features.
+                </p>
+                <div class="code-block">
+                  const element = &lt;h1&gt;Hello, world!&lt;/h1&gt;;
+                </div>
+                <p>
+                  JSX makes your code easier to understand and write, but
+                  remember that under the hood, it's still JavaScript.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Components and Props -->
+          <section class="section" id="components">
+            <h2>Components and Props</h2>
+            <div class="section-content">
+              <img
+                src="./assets/components-props-example.png"
+                alt="Components and Props in React"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  Components let you split the UI into independent, reusable
+                  pieces. <strong>Props</strong> are how you pass data from
+                  parent to child components.
+                </p>
+                <div class="code-block">
+                  function Welcome(props) &#123;<br />
+                  return &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;<br />&#125;
+                </div>
+                <div class="code-block">&lt;Welcome name="Sara" /&gt;</div>
+                <p>
+                  In this example, <code class="inline-code">name</code> is a
+                  prop passed to the
+                  <code class="inline-code">Welcome</code> component.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- State and Lifecycle -->
+          <section class="section" id="state">
+            <h2>State and Lifecycle</h2>
+            <div class="section-content">
+              <img
+                src="./assets/state-lifecycle-example.png"
+                alt="State and lifecycle in React"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  <strong>State</strong> is similar to props, but it is private
+                  and fully controlled by the component. Lifecycle refers to the
+                  different stages a component goes through.
+                </p>
+                <div class="code-block">
+                  import React, &#123; useState &#125; from 'react';<br />
+                  function Counter() &#123;<br />
+                  const [count, setCount] = useState(0);<br />
+                  return (&lt;button onClick={() =&gt; setCount(count +
+                  1)}&gt;You clicked &#123;count&#125; times&lt;/button&gt;);<br />&#125;
+                </div>
+                <p>
+                  In this example, <code class="inline-code">useState</code> is
+                  a <strong>Hook</strong> that lets functional components have
+                  state.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Handling Events -->
+          <section class="section" id="events">
+            <h2>Handling Events</h2>
+            <div class="section-content">
+              <img
+                src="./assets/events-example.png"
+                alt="Handling events in React"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  Handling events in React is similar to handling events on DOM
+                  elements, but with some syntactic differences.
+                </p>
+                <div class="code-block">
+                  function MyButton() &#123;<br />
+                  function handleClick() &#123;<br />
+                  alert('You clicked!');<br />&#125;<br />
+                  return (&lt;button onClick=&#123;handleClick&#125;&gt;Click
+                  me&lt;/button&gt;);<br />&#125;
+                </div>
+                <p>
+                  Event names in React use camelCase, and you pass a function as
+                  the event handler.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Introduction to Hooks -->
+          <section class="section" id="hooks-intro">
+            <h2>Introduction to Hooks</h2>
+            <div class="section-content">
+              <img
+                src="./assets/hooks-intro-example.png"
+                alt="Introduction to Hooks in React"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  <strong>Hooks</strong> are a new addition in React 16.8 that
+                  let you use state and other React features without writing a
+                  class.
+                </p>
+                <div class="code-block">
+                  import React, &#123; useState &#125; from 'react';
+                </div>
+                <p>
+                  The <code class="inline-code">useState</code> Hook lets you
+                  add React state to a functional component.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- useState Hook -->
+          <section class="section" id="usestate">
+            <h2>The useState Hook</h2>
+            <div class="section-content">
+              <img
+                src="./assets/usestate-example.png"
+                alt="useState example in React"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  <code class="inline-code">useState</code> is a Hook that lets
+                  you add a state variable to your component.
+                </p>
+                <div class="code-block">
+                  const [count, setCount] = useState(0);
+                </div>
+                <p>
+                  You can use <code class="inline-code">setCount</code> to
+                  update the value of <code class="inline-code">count</code>.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- useEffect Hook -->
+          <section class="section" id="useeffect">
+            <h2>The useEffect Hook</h2>
+            <div class="section-content">
+              <img
+                src="./assets/useeffect-example.png"
+                alt="useEffect example in React"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  <code class="inline-code">useEffect</code> is a Hook that lets
+                  you perform side effects in your components, such as data
+                  fetching or DOM manipulation.
+                </p>
+                <div class="code-block">
+                  useEffect(() =&gt; &#123;<br />
+                  document.title = `Clicks: &#123;count&#125;`;<br />&#125;,
+                  [count]);
+                </div>
+                <p>
+                  The second argument is a dependency array. The effect will
+                  only run when one of the dependencies changes.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Performance -->
+          <section class="section" id="performance">
+            <h2>Performance</h2>
+            <div class="section-content">
+              <img
+                src="./assets/performance-example.png"
+                alt="Performance in React"
+                class="section-img"
+              />
+              <div>
+                <p>
+                  React is fast by default, but there are techniques to further
+                  optimize performance, such as
+                  <code class="inline-code">React.memo</code> and
+                  <code class="inline-code">useMemo</code>.
+                </p>
+                <div class="code-block">
+                  const MemoizedComponent = React.memo(MyComponent);
+                </div>
+                <p>
+                  Use these tools to avoid unnecessary renders and improve user
+                  experience.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <!-- Footer and Back to Top Button -->
       <footer class="footer">
         <div class="footer-content">
           <p>&copy; 2025 React Docs Tutorial. All rights reserved.</p>
         </div>
       </footer>
     </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">↑</button>
+    <div class="overlay" id="overlay"></div>
 
-    <script src="scripts/main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
